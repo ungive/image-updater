@@ -8,7 +8,7 @@ contains the following three options:
 * `download_stack_size`: The maximum amount of downloads that are allowed to be processed simultaneously (default: 10).  
 
 You are free to change these settings, but be aware that too many requests at the same  
-time can overload your connection to the internet and cause unexpected issues/results,
+time can overload your connection to the internet and cause unexpected issues/results,  
 like missing image data or large internet performance drops.  
 The port is arbitrary and does not contribute to this.  
 
