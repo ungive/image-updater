@@ -5,7 +5,7 @@ by double-clicking the executable. The config.json file in the `imgupd_data` fol
 contains the following three options:  
 * `port`: The port that the server is running on (default: 3000).  
 * `delay`: The delay between the asynchronous download requests in milliseconds (default: 500).  
-* `download_stack_size`: The maximum amount of downloads that are allowed to be processed at the same time (Default: 10).  
+* `download_stack_size`: The maximum amount of downloads that are allowed to be processed simultaneously (default: 10).  
 
 You are free to change these settings, but be aware that too many requests at the same  
 time can overload your connection to the internet and cause unexpected issues/results,
