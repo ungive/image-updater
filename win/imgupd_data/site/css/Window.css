@@ -1,0 +1,51 @@
+.window {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f2f2f2;
+  margin: 25px auto auto auto;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 6px solid #fbfbfb;
+  border-top-width: 28px;
+}
+.window::before {
+  content: '';
+  position: absolute;
+  top: -29px;
+  left: -7px;
+  right: -7px;
+  bottom: -7px;
+  border: 1px solid #c0c0c0;
+}
+.app {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto auto auto;
+  border: 1px solid #d6d6d6;
+}
+.windowTitle {
+  position: absolute;
+  top: -21px;
+  left: 17px;
+  font-size: 13px;
+  cursor: default;
+  pointer-events: none;
+}
+.windowIcon {
+  position: absolute;
+  top: -22px;
+  left: -1px;
+  pointer-events: none;
+}

@@ -1,0 +1,21 @@
+.progressBar {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #bcbcbc;
+}
+
+.progressBar::-webkit-progress-bar {
+  background: #e6e6e6;
+}
+.progressBar::-webkit-progress-value {
+  background: #06b025;
+}
+
+.progressStatus {
+  position: relative;
+  top: -1px;
+  left: -177px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: default;
+}

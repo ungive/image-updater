@@ -1,0 +1,25 @@
+.winform {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  outline:none;
+  position:absolute;
+  background:-webkit-linear-gradient(#fafafa, #f0f0f0);
+  background:-moz-linear-gradient(#fafafa, #f0f0f0);
+  background:-o-linear-gradient(#fafafa, #f0f0f0);
+  background:linear-gradient(#fafafa, #f0f0f0);
+  border:1px solid #acacac;
+}
+
+.winform:hover {
+  background:-webkit-linear-gradient(#ecf4fc, #dcecfc);
+  background:-moz-linear-gradient(#ecf4fc, #dcecfc);
+  background:-o-linear-gradient(#ecf4fc, #dcecfc);
+  background:linear-gradient(#ecf4fc, #dcecfc);
+  border:1px solid #7eb4ea;
+}
+
+.winform:disabled {
+  background:#fafafa;
+  border:1px solid #acacac;
+}
