@@ -13,6 +13,8 @@ body {
 .label.dropdown {
   font-size: 14px;
   padding-top: 2px;
+  padding-left: 4px;
+  text-align: left;
   -webkit-text-stroke-width: 0.05px;
   -webkit-text-stroke-color: black;
 }
@@ -39,6 +41,7 @@ body {
 .imageThumbnail {
   position: absolute;
   max-width: 74px;
+  max-height: 100px;
 }
 
 .button {
