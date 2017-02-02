@@ -306,18 +306,20 @@ self.prototype.download = function (options, statusCallback) {
               // File is outdated so download it.
               doDownload();
             else {
-              // This file is downloaded.
+              // This file is downloaded already.
               ++downloadedFiles;
               // Invoke the status callback with
               // information about the skipped file.
-              statusCallback({
-                type: 'file',
-                content: {
-                  name: entry.name,
-                  path: relative,
-                  number: downloadedFiles
-                }
-              });
+              // EDIT: Removed, because this slows down the download
+              //       quite a bit and it's kinda redundant.
+              // statusCallback({
+              //   type: 'file',
+              //   content: {
+              //     name: entry.name,
+              //     path: relative,
+              //     number: downloadedFiles
+              //   }
+              // });
               if (downloadedFiles === fileCount)
                 // Download the next folder if all
                 // files of this one were downloaded.

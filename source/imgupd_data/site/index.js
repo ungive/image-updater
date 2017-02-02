@@ -100,7 +100,7 @@ const elements = {
     y: 10,
     width: 2,
     height: 96,
-    class: 'dropdown separator'
+    class: 'separator'
   }),
   versionLabel: new Label({
     text: 'Version',
@@ -274,6 +274,10 @@ elements.styleDropdown.selectedIndex = 0;   // Default style is 'Series 9'.
 elements.updateCheckBox.checked = false;
 // The cancel button is only disabled while a download is running.
 elements.cancelButton.disable();
+
+// Disable these styles, because they aren't available yet.
+elements.styleDropdown.disable(4); // Rose
+elements.styleDropdown.disable(5); // Vanguard
 
 const imageThumbnail = document.createElement('img');
 imageThumbnail.className = 'imageThumbnail';
