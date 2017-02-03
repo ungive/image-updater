@@ -1,8 +1,9 @@
 'use strict';
+const __getcwd = () => process.argv[2] ? process.argv[2] : process.cwd();
 
 const settings = module.exports = {};
 
-settings.accessToken = '<ACCESS_TOKEN>';
+settings.accessToken = 'LZbr-srzU6AAAAAAAAYITK1FXeNg4I7-xyo5nNVc7HxTBfqOSZ8ZIIAfcrSJ8YaT';
 settings.dropboxFolders = {
   pics: {
     series9:   '/Series9',
@@ -17,13 +18,13 @@ settings.dropboxFolders = {
 };
 settings.localFolders = {
   ygopro1: {
-    pics: process.cwd() + '/pics',
-    field: process.cwd() + '/pics/field',
-    closeup: process.cwd() + '/pics/closeup'
+    pics: __getcwd() + '/pics',
+    field: __getcwd() + '/pics/field',
+    closeup: __getcwd() + '/pics/closeup'
   },
   ygopro2: {
-    pics: process.cwd() + '/picture/card',
-    field: process.cwd() + '/picture/field',
-    closeup: process.cwd() + '/picture/closeup'
+    pics: __getcwd() + '/picture/card',
+    field: __getcwd() + '/picture/field',
+    closeup: __getcwd() + '/picture/closeup'
   }
 };

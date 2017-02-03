@@ -1,4 +1,5 @@
 'use strict';
+const __getcwd = () => process.argv[2] ? process.argv[2] : process.cwd();
 
 // This object contains the settings for the downloader.
 const settings = require('./settings.js');
@@ -246,7 +247,7 @@ self.prototype.download = function (options, statusCallback) {
         // The paths to the file.
         const dropboxFilePath = `${dropboxFolder}/${entry.name}`;
         const destination = `${localFolder}/${entry.name}`;
-        const relative = path.relative(process.cwd() + '/site/', destination);
+        const relative = path.relative(__getcwd() + '/site/', destination);
 
         // Code for downloading is in a seperate function because it's used twice.
         const doDownload = function () {

@@ -1,3 +1,6 @@
+'use strict';
+const __getcwd = () => process.argv[2] ? process.argv[2] : process.cwd();
+
 const fs = require('fs');
 const path = require('path');
 const defaultConfig = {
@@ -7,7 +10,7 @@ const defaultConfig = {
 };
 
 const self = module.exports = function (filePath) {
-  const configPath = path.resolve(process.cwd(), filePath);
+  const configPath = path.resolve(__getcwd(), filePath);
   let config;
 
   if (fs.existsSync(configPath)) {

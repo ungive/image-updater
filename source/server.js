@@ -1,4 +1,6 @@
 'use strict';
+const __getcwd = () => process.argv[2] ? process.argv[2] : process.cwd();
+
 const __data_folder = 'imgupd_data';
 const __site_folder = __data_folder + '/site';
 
@@ -10,17 +12,17 @@ const open = require('open');
 
 // Create an express app.
 const app = express();
-app.use(express.static('.'));
-app.use(express.static('./' + __site_folder));
-app.use(express.static('./pics'));
-app.use(express.static('./pics/field'));
-app.use(express.static('./pics/closeup'));
-app.use(express.static('./picture'));
-app.use(express.static('./picture/card'));
-app.use(express.static('./picture/field'));
-app.use(express.static('./picture/closeup'));
+app.use(express.static(__getcwd() + ''));
+app.use(express.static(__getcwd() + '/' + __site_folder));
+app.use(express.static(__getcwd() + '/pics'));
+app.use(express.static(__getcwd() + '/pics/field'));
+app.use(express.static(__getcwd() + '/pics/closeup'));
+app.use(express.static(__getcwd() + '/picture'));
+app.use(express.static(__getcwd() + '/picture/card'));
+app.use(express.static(__getcwd() + '/picture/field'));
+app.use(express.static(__getcwd() + '/picture/closeup'));
 app.get('/', function (request, response) {
-  response.sendFile(`${process.cwd()}/${__site_folder}/index.html`);
+  response.sendFile(`${__getcwd()}/${__site_folder}/index.html`);
 });
 
 // Create a server by listening to the port in the config.
@@ -28,7 +30,7 @@ const server = app.listen(config.port);
 // Create a socket by listening to the created server.
 // The second argument was extended by the property 'folder', which
 // will be used to figure out where the socket.io.min.js script is located.
-const io = socketIo.listen(server, {folder: __site_folder});
+const io = socketIo.listen(server, {folder: __getcwd() + '/' + __site_folder});
 
 console.log(`Server is running on port ${config.port}.`);
 console.log('Waiting for connection...');
