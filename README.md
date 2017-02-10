@@ -1,7 +1,7 @@
 # Image Updater
 
 #### Quick Download
-- [**Windows**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.1-win/ImageUpdater-win.zip)  
+- [**Windows**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.2-win/ImageUpdater-win.zip)  
 - [**Mac OS X**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.1-mac/ImageUpdater-mac.zip)  
 
 --
