@@ -275,6 +275,9 @@ elements.updateCheckBox.checked = false;
 // The cancel button is only disabled while a download is running.
 elements.cancelButton.disable();
 
+elements.styleDropdown.disable(1);
+elements.styleDropdown.disable(2);
+elements.styleDropdown.disable(3);
 // Disable these styles, because they aren't available yet.
 elements.styleDropdown.disable(4); // Rose
 elements.styleDropdown.disable(5); // Vanguard
