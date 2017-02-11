@@ -2,57 +2,52 @@
 // Create a new sockect.
 //
 const socket = io.connect('/');
-socket.on('message', function (message) {
-  const response = JSON.parse(message);
-  const content = response.content;
 
-  switch (response.type) {
-    case 'file_count': {
-      const progress = elements.progressBar;
-      progress.max = content.file_count;
-      break;
-    }
-    case 'file': {
-      const progress = elements.progressBar;
-      progress.value = content.number;
+socket.on('file_count', function (data) {
+  const progress = elements.progressBar;
+  progress.max = data.file_count;
+});
 
-      const percent = progress.value / progress.max * 100;
-      const type = currentDownloadType ? (currentDownloadType + ': ') : '';
-      app.title = 'Downloading ' + type + content.name + ' - ' + percent.toFixed(1) + '%';
-      app.width = appWidth.withThumbnail;
+socket.on('file', function (data) {
+  const progress = elements.progressBar;
+  progress.value = data.number;
 
-      imageThumbnail.src = content.path;
-      break;
-    }
-    case 'collecting_files': {
-      app.title = 'Retrieving data...';
-      currentDownloadType = content.type;
-      break;
-    }
-    case 'finished': {
-      // Enable the dropdowns, the check box and
-      // the download button and disable this button.
-      elements.versionDropdown.pop();
-      elements.typeDropdown.pop();
-      elements.styleDropdown.pop();
-      elements.updateCheckBox.enable();
-      elements.downloadButton.enable();
-      elements.cancelButton.disable();
+  const percent = progress.value / progress.max * 100;
+  const type = currentDownloadType ? (currentDownloadType + ': ') : '';
 
-      // Reset the title and the progress bar.
-      app.title = 'Image Updater';
-      elements.progressBar.value = 0;
-      // Remove the image.
-      imageThumbnail.src = '';
+  const status = data.finishing ? 'Finishing' : 'Downloading';
+  app.title = status + ' ' + type + data.name + ' - ' + percent.toFixed(1) + '%';
+  app.width = appWidth.withThumbnail;
 
-      app.title += ' - Finished';
-      app.width = appWidth.withoutThumbnail;
-      setTimeout(function () {
-        app.title = 'Image Updater';
-      }, 1500);
-      break;
-    }
-  }
+  imageThumbnail.src = data.path;
+});
+
+socket.on('collecting_files', function (data) {
+  app.title = 'Retrieving data...';
+  currentDownloadType = data.type;
+});
+
+socket.on('finishing', function () {
+  // Enable the dropdowns, the check box and
+  // the download button and disable this button.
+  elements.versionDropdown.pop();
+  elements.typeDropdown.pop();
+  elements.styleDropdown.pop();
+  elements.updateCheckBox.enable();
+  elements.downloadButton.enable();
+  elements.cancelButton.disable();
+});
+
+socket.on('finished', function (data) {
+  // Reset the title and the progress bar.
+  app.title = 'Image Updater - Finished';
+  setTimeout(function () {
+    app.title = 'Image Updater';
+  }, 1500);
+
+  app.width = appWidth.withoutThumbnail;
+  elements.progressBar.value = 0;
+  imageThumbnail.src = '';
 });
 
 //
@@ -177,21 +172,14 @@ elements.downloadButton.onclick = function () {
   this.disable();
 
   // Send a message to the server to start the download.
-  socket.send(JSON.stringify({
-    type: 'download_start',
-    data: {
-      options: downloadInformation
-    }
-  }));
+  socket.emit('download_start', downloadInformation);
 };
 
 elements.cancelButton.onclick = function () {
   this.disable();
   app.title += ' - Canceling';
   // Send a message to the server to stop the download.
-  socket.send(JSON.stringify({
-    type: 'download_cancel'
-  }));
+  socket.emit('download_cancel');
 };
 
 elements.versionDropdown.onselect = function (item) {
