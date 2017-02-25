@@ -4,6 +4,7 @@
 const socket = io.connect('/');
 
 socket.on('file_count', function (data) {
+  console.log('file_count\n', data);
   const progress = elements.progressBar;
   progress.max = data.file_count;
 });
@@ -23,11 +24,13 @@ socket.on('file', function (data) {
 });
 
 socket.on('collecting_files', function (data) {
+  console.log('collecting_files', data);
   app.title = 'Retrieving data...';
   currentDownloadType = data.type;
 });
 
 socket.on('finishing', function () {
+  console.log('finishing');
   // Enable the dropdowns, the check box and
   // the download button and disable this button.
   elements.versionDropdown.pop();
@@ -38,7 +41,8 @@ socket.on('finishing', function () {
   elements.cancelButton.disable();
 });
 
-socket.on('finished', function (data) {
+socket.on('finished', function () {
+  console.log('finished');
   // Reset the title and the progress bar.
   app.title = 'Image Updater - Finished';
   setTimeout(function () {
