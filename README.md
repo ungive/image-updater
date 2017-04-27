@@ -4,8 +4,6 @@
 - [**Windows**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-win/ImageUpdater-win-v0.0.4.1.zip) ([**zip**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-win/ImageUpdater-win-v0.0.4.1.zip) | [**rar**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-win/ImageUpdater-win-v0.0.4.1.rar)) 
 - [**Mac OS X**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) ([**zip**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) | [**tar.gz**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.tar.gz) | [**rar**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.rar))
 
---
-
 * [`Settings`](#settings)
 * [`Configuration`](#configuration)
 * [`Source`](#source)
@@ -17,8 +15,6 @@
 >Select the version of YGOPro you are playing. The options are `YGOPro1` and `YGOPro2`.  
 Default is `YGOPro2`.  
 
---
-
 ### Type
 >Select which Images you want to download. The options are `All Images`, `Picture`, `Field` and `Close-up`.  
 **All Images:** Downloads all pictures in the order that they are appearing above.  
@@ -26,18 +22,12 @@ Default is `YGOPro2`.
 **Field:** Downloads the artworks of the field spells (Resolution: 544x544px).  
 **Close-up:** Downloads the close-up artworks of all cards without their background (Resolution: 544x544px).  
 
---
-
 ### Style
 >Select the style of the card pictures.  
-
---
 
 ### Updating
 >By ticking the checkbox `☐ Overwrite Images` you overwrite all existing images.  
 If kept unticked only images that are outdated will be downloaded.  
-
---
 
 ### Download
 >Once you have set your preferences click the `Download` button to start the process.  
