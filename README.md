@@ -2,7 +2,7 @@
 
 #### Quick Download
 - [**Windows**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-win/ImageUpdater-win-v0.0.4.1.zip) ([**zip**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-win/ImageUpdater-win-v0.0.4.1.zip) | [**rar**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-win/ImageUpdater-win-v0.0.4.1.rar)) 
-- [**Mac OS X**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) ([**zip**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) | [**tar.gz**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.tar.gz) | [**rar**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.rar))
+- [**Mac OS X**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) ([**zip**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) | [**tar.gz**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.tar.gz))
 
 * [`Settings`](#settings)
 * [`Configuration`](#configuration)
