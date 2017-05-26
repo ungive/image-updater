@@ -55,9 +55,9 @@ The port is arbitrary and does not contribute to this.
 
 ## Source
 
-`©2017 Jonas Vanen` `Images: HQ Card Project`  
+`©2017 Jonas van den Berg` `Images: HQ Card Project`  
 If you are interested in using my Windows-style CSS/JS pack, you can find it here:  
-https://github.com/jonas-vanen/ms-windows-html  
+https://github.com/jonas-vdberg/ms-windows-html  
 Join our Discord community:  
 
 [![YGOPro Percy](http://i.imgur.com/v732Scx.png)](https://discord.gg/Rae2vZV)
