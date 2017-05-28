@@ -204,7 +204,7 @@ elements.versionDropdown.onselect = function (item) {
   }
   else if (item === elements.versionDropdown.options[1]) {
     // Disable style selection if the user selected YGOPro2.
-    elements.styleDropdown.disable();
+    // elements.styleDropdown.disable();
     // Reset the style back to Series 10.
     elements.styleDropdown.selectedIndex = 0;
     // Enable close-ups for YGOPro2.
