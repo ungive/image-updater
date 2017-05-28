@@ -1,7 +1,7 @@
 # Image Updater
 
 #### Quick Download
-- [**Windows(0.0.4.2**](https://github.com/jonas-vdberg/image-updater/releases/download/v0.0.4.2-win/ImageUpdater-win-v0.0.4.2.zip) ([**zip**](https://github.com/jonas-vdberg/image-updater/releases/download/v0.0.4.2-win/ImageUpdater-win-v0.0.4.2.zip) | [**rar**](https://github.com/jonas-vdberg/image-updater/releases/download/v0.0.4.2-win/ImageUpdater-win-v0.0.4.2.rar)) 
+- [**Windows 0.0.4.2**](https://github.com/jonas-vdberg/image-updater/releases/download/v0.0.4.2-win/ImageUpdater-win-v0.0.4.2.zip) ([**zip**](https://github.com/jonas-vdberg/image-updater/releases/download/v0.0.4.2-win/ImageUpdater-win-v0.0.4.2.zip) | [**rar**](https://github.com/jonas-vdberg/image-updater/releases/download/v0.0.4.2-win/ImageUpdater-win-v0.0.4.2.rar)) 
 - [**Mac OS X 0.0.4.1**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) ([**zip**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.zip) | [**tar.gz**](https://github.com/jonas-vanen/image-updater/releases/download/v0.0.4.1-mac/ImageUpdater-mac-v0.0.4.1.tar.gz))
 
 * [`Settings`](#settings)
