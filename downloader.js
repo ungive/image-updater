@@ -110,7 +110,13 @@ function Timer(delay) {
 self.prototype.downloadFile = function (repository, file, destination, callback) {
   const timer = new Timer();
   const doDownload = function () {
-    const host = settings.useRawGit ? "cdn.rawgit.com" : "raw.githubusercontent.com";
+    let host = null;
+    if (settings.useRawGit)
+      host = "cdn.rawgit.com";
+    else if (repository === settings.githubRepositories.field)
+      host = "raw.githubusercontent.com";
+    else
+      host = "media.githubusercontent.com/media";
     const url = `https://${host}/shadowfox87/${repository}/master/${file}`;
     const writeStream = fs.createWriteStream(destination);
     writeStream.on('error', error => logError(error, 4));

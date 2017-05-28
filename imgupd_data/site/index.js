@@ -145,7 +145,7 @@ const elements = {
     x: labelWidth + 10,
     y: 66,
     z: 1,
-    options: ['Series 10', 'Anime', 'Full Art v1', 'Full Art v3', 'Rose', 'Vanguard']
+    options: ['Series 10', 'Anime', 'Full Art v1', 'Full Art v3', 'Vanguard', 'Rose']
   }),
   // A check box to specify if only outdated pictures are updated.
   updateCheckBox: new CheckBox({
@@ -267,12 +267,12 @@ elements.updateCheckBox.checked = false;
 // The cancel button is only disabled while a download is running.
 elements.cancelButton.disable();
 
-elements.styleDropdown.disable(1);
-elements.styleDropdown.disable(2);
-elements.styleDropdown.disable(3);
+// elements.styleDropdown.disable(1);
+// elements.styleDropdown.disable(2);
+// elements.styleDropdown.disable(3);
 // Disable these styles, because they aren't available yet.
-elements.styleDropdown.disable(4); // Rose
-elements.styleDropdown.disable(5); // Vanguard
+// elements.styleDropdown.disable(4); // Rose
+// elements.styleDropdown.disable(5); // Vanguard
 
 const imageThumbnail = document.createElement('img');
 imageThumbnail.className = 'imageThumbnail';

@@ -6,12 +6,12 @@ const settings = module.exports = {};
 settings.useRawGit = false;
 settings.githubRepositories = {
   pics: {
-    series10:   'YGOSeries10CardPics',
-    anime:     'YGOAnimeStylePics',
-    fullartv1: 'YGOFullArt1Pics',
-    fullartv3: 'YGOFullArt3Pics',
-    rose:      'YGORoseStylePics',
-    vanguard:  'YGOVanguardStylePics'
+    series10:  'YGOSeries10CardPics',
+    anime:     'AnimeStylePics',
+    fullartv1: 'FullArtv1',
+    fullartv3: 'FullArtv3',
+    rose:      'RoseStylePics',
+    vanguard:  'VanguardStylePics'
   },
   field:   'field544x544png',
   closeup: 'YGOTCGOCGPicsNoBG'
