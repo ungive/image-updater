@@ -130,7 +130,7 @@ const elements = {
     x: labelWidth + 10,
     y: 38,
     z: 2,
-    options: ['All Images', 'Pics', 'Field', 'Close-up']
+    options: ['All Images', 'Pics', 'Field'/*, 'Close-up'*/]
   }),
   styleLabel: new Label({
     text: 'Style',
@@ -197,10 +197,10 @@ elements.versionDropdown.onselect = function (item) {
     if (selectedType !== type.options[2] && selectedType !== type.options[3])
       elements.styleDropdown.enable();
     // Disable close-ups for YGOPro1.
-    elements.typeDropdown.disable(3);
+    // elements.typeDropdown.disable(3);
     // Set the type to 'All Images' if close-ups were selected.
-    if (elements.typeDropdown.selectedIndex === 3)
-      elements.typeDropdown.selectedIndex = 0;
+    // if (elements.typeDropdown.selectedIndex === 3)
+    //   elements.typeDropdown.selectedIndex = 0;
   }
   else if (item === elements.versionDropdown.options[1]) {
     // Disable style selection if the user selected YGOPro2.
@@ -208,20 +208,21 @@ elements.versionDropdown.onselect = function (item) {
     // Reset the style back to Series 10.
     elements.styleDropdown.selectedIndex = 0;
     // Enable close-ups for YGOPro2.
-    elements.typeDropdown.enable(3);
+    // elements.typeDropdown.enable(3);
   }
 };
 
 elements.typeDropdown.onselect = function (item) {
   downloadInformation.type = item;
 
-  const version = elements.versionDropdown;
-  const selectedVersion = version.options[version.selectedIndex];
-  if (selectedVersion === version.options[1])
-    return;
+  // const version = elements.versionDropdown;
+  // const selectedVersion = version.options[version.selectedIndex];
+  // if (selectedVersion === version.options[1])
+  //   return;
 
-  if (item === elements.typeDropdown.options[2] ||
-      item === elements.typeDropdown.options[3]) {
+  // console.log('>', item, elements.typeDropdown.options[2])
+  if (item === elements.typeDropdown.options[2]/* ||
+      item === elements.typeDropdown.options[3]*/) {
     elements.styleDropdown.disable();
   } else
     elements.styleDropdown.enable();
