@@ -13,18 +13,18 @@ settings.githubRepositories = {
     rose:      'RoseStylePics',
     vanguard:  'VanguardStylePics'
   },
-  field:   'field544x544png',
-  closeup: 'YGOTCGOCGPicsNoBG'
+  field:   'field544x544png'/*,
+  closeup: 'YGOTCGOCGPicsNoBG'*/
 };
 settings.localFolders = {
   ygopro1: {
     pics: __getcwd() + '/pics',
-    field: __getcwd() + '/pics/field',
-    closeup: __getcwd() + '/pics/closeup'
+    field: __getcwd() + '/pics/field'/*,
+    closeup: __getcwd() + '/pics/closeup'*/
   },
   ygopro2: {
     pics: __getcwd() + '/picture/card',
-    field: __getcwd() + '/picture/field',
-    closeup: __getcwd() + '/picture/closeup'
+    field: __getcwd() + '/picture/field'/*,
+    closeup: __getcwd() + '/picture/closeup'*/
   }
 };
