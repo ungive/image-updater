@@ -1,4 +1,5 @@
 # Image Updater
+[![status](https://img.shields.io/badge/status-deprecated-red.svg)](https://github.com/snrk0/image-updater)
 
 #### Quick Download
 - [**Windows 0.0.4.3**](https://github.com/jonas-git/image-updater/releases/download/v0.0.4.3-win/ImageUpdater-win-v0.0.4.3.zip) ([**zip**](https://github.com/jonas-git/image-updater/releases/download/v0.0.4.3-win/ImageUpdater-win-v0.0.4.3.zip) | [**rar**](https://github.com/jonas-git/image-updater/releases/download/v0.0.4.3-win/ImageUpdater-win-v0.0.4.3.rar)) 
